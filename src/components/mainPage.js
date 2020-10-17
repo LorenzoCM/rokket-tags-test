@@ -27,7 +27,7 @@ const MainPage = (props) => {
                     <div className="col-md-8 input-group mb-0">
                         <input type="text" name="userInput" className="form-control" placeholder="Add a tag to search..." onChange={actions.handleChange} />
                         <div className="input-group-append">
-                            <Link to="/posts"><button className="btn btn-secondary" type="submit" onClick={(e) => actions.getPosts(store.userInput)}>Button</button></Link>
+                            <Link to="/posts"><button className="btn btn-secondary" type="submit" onClick={(e) => actions.getPosts(store.userInput.toLowerCase())}>Button</button></Link>
                         </div>
                     </div>
                 </div>

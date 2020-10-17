@@ -19,7 +19,7 @@ const Posts = () => {
                         </div>
                     </div> :
                         <div className="d-flex justify-content-center mb-5 align-items-center animate__animated animate__bounceIn">
-                            <h2 className="text-style">Showing tags of #{store.userInput}</h2>
+                            <h2 className="text-style posts-title">Showing tags of #{store.userInput}</h2>
                         </div>
                     }
                     <div className="card-columns">
