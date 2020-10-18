@@ -5,7 +5,7 @@ const Footer = props => {
         <footer className="text-center mt-5 py-4 bg-dark text-white">            
             <p>All Rights Reserved &copy;</p>
             <p>Rokket Tags</p>
-            <p>2019</p>
+            <p>2020</p>
         </footer>
     )    
 }

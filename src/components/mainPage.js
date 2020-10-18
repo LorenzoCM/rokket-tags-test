@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { Context } from '../store/appContext';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
-const MainPage = (props) => {
+const MainPage = props => {
 
     const { store, actions } = useContext(Context);
+    const history = useHistory();
+
 
 
     return (
@@ -24,12 +26,12 @@ const MainPage = (props) => {
             </div>
             <div className="row">
                 <div className="col-md-12 backGround d-flex justify-content-center align-items-center mb-0 mt-1">
-                    <div className="col-md-8 input-group mb-0">
-                        <input type="text" name="userInput" className="form-control" placeholder="Add a tag to search..." onChange={actions.handleChange} />
+                    <form className="col-md-8 input-group mb-0" onSubmit={(e) => actions.getPosts(e, store.userInput.toLowerCase(), history)}>
+                        <input type="text" name="userInput" className="form-control" required placeholder="Add a tag to search..." onChange={actions.handleChange} />
                         <div className="input-group-append">
-                            <Link to="/posts"><button className="btn btn-secondary" type="submit" onClick={(e) => actions.getPosts(store.userInput.toLowerCase())}>Button</button></Link>
+                            <button className="btn btn-secondary" type="submit">Button</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

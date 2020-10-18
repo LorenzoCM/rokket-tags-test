@@ -1,24 +1,34 @@
 import React, { useContext, useEffect } from 'react';
 import { Context } from '../store/appContext';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 
 
 const Posts = () => {
 
-    const { store, actions } = useContext(Context);
+    const { store, actions } = useContext(Context);    
 
     return (
 
         <div className="container container-fluid content-wrap">
+            <Link to="/" className="btn btn-secondary mt-5 mb-0">Go Home</Link>
             <div className="row">
                 <div id="posts" className="container cardsGroup">
-                    {store.loading ? <div className="d-flex justify-content-center">
-                        <div className="spinner-border" role="status">
-                            <span className="sr-only">Loading...</span>
-                        </div>
-                    </div> :
-                        <div className="d-flex justify-content-center mb-5 align-items-center animate__animated animate__bounceIn">
+                    {
+                        store.loading && <div className="d-flex justify-content-center">
+                            <div className="spinner-border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </div>
+                        </div>}
+                    {
+                        !!store.posts && store.posts.length === 0 &&
+                        <div className="d-flex justify-content-center mb-5 align-items-center animate__animated  animate__fadeInUp">
+                            <h2 className="text-style posts-title">There are no posts with #{store.userInput}</h2>
+                        </div>}
+                    {
+                        !!store.posts && store.posts.length > 0 &&
+                        <div className="d-flex justify-content-center showing-title align-items-center animate__animated  animate__fadeInUp">
                             <h2 className="text-style posts-title">Showing tags of #{store.userInput}</h2>
                         </div>
                     }
@@ -27,7 +37,7 @@ const Posts = () => {
                             store.posts.map((post, index) => {
                                 let seconds = 0;
                                 return (
-                                    <div className={`card col-lg-12 mb-3 animate__animated animate__fadeInUp animate__delay-${seconds++}s`} key={index}>
+                                    <div className={`card col-lg-12 mb-3 animate__animated animate__fadeInUp`} key={index}>
                                         <div className="container card-body no-gutters d-flex">
                                             <div className="col-md-2 col-2">
                                                 <div><img className="card-img-top img-fluid rounded-circle profile-pic" src={post.owner.picture} /></div>
