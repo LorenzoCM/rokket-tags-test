@@ -9,6 +9,11 @@ const Posts = () => {
 
     const { store, actions } = useContext(Context);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
+
     return (
         <div className="container container-fluid content-wrap">
             {/* Link button to let the user go back to the home screen */}

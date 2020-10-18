@@ -85,6 +85,9 @@ hr {
     font-size: 25px;
     margin-top: 30px;    
   }
+  .secondary-text {
+    margin-left: 24px;
+  }
 }
 
 .text-style {
