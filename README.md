@@ -6,9 +6,9 @@ Rokket Tags is a web app destinated to search posts according to a tag given by 
 ## Installation:
 
 ```bash
-Clone this repository.
-Run npm install in your IDE console.
-Run npm start in your IDE console.
+-Clone this repository.
+-Run npm install in your IDE console.
+-Run npm start in your IDE console.
 ```
 
 
