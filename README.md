@@ -27,7 +27,7 @@ Technologies and libraries used:
 ```bash
 -Bootstrap
 -Moment.js
--React Router Dom
+-React-Router-Dom
 -Animate.css
 ```
 
