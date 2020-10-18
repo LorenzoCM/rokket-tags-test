@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rokket Tags
 
-## Available Scripts
+Rokket Tags is a web app destinated to search posts according to a tag given by the user.
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+Clone this repository.
+Run npm install in your IDE console.
+Run npm start in your IDE console.
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## How to use:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This app was created to be user friendly and easy to use. Just write the tag word you're interested of in the search bar, click the button "search" and the app will show all the posts related to that specific tag. Then, you can go back to the home screen and search for another tag.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech/Frameword used:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Build with: 
+```bash
+-React.js
+```
+Technologies and libraries used:
+```bash
+-Bootstrap
+-Moment.js
+-React Router Dom
+-Animate.css
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Comments by the developer:
 
-### `npm run eject`
+This project was created with React.js. In this code you will find a development realized with the use of several React Hooks as useHistory and useEffect, according to the needs of the project. Also, the use of React Context as a state framework. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In addition, you'll find the use of a loading method through a Hook state and conditional rendering. This was made with a loading spinner provided by Bootstrap. Besides, to get the posts and tags information from the database, the Dummy API (https://dummyapi.io/) was consulted in the flux, passing the fetch functions to the corresponding buttons and to the useEffect Hook, and then, storing the data in each variable in the store.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The main titles were animated with the animate.css library.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+You will find the app live Demo in the following link:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+https://rokket-tags-test.vercel.app/
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

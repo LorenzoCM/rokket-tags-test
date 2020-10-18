@@ -7,14 +7,15 @@ import { Link } from 'react-router-dom';
 
 const Posts = () => {
 
-    const { store, actions } = useContext(Context);    
+    const { store, actions } = useContext(Context);
 
     return (
-
         <div className="container container-fluid content-wrap">
-            <Link to="/" className="btn btn-secondary mt-5 mb-0">Go Home</Link>
+            {/* Link button to let the user go back to the home screen */}
+            <Link to="/" className="btn btn-secondary mt-5 mb-0 search">Go Home</Link>
             <div className="row">
                 <div id="posts" className="container cardsGroup">
+                    {/* Conditional rendering section, shows the loading spinner while fetching and if there are o are not posts to show to the user */}
                     {
                         store.loading && <div className="d-flex justify-content-center">
                             <div className="spinner-border" role="status">
@@ -24,14 +25,19 @@ const Posts = () => {
                     {
                         !!store.posts && store.posts.length === 0 &&
                         <div className="d-flex justify-content-center mb-5 align-items-center animate__animated  animate__fadeInUp">
-                            <h2 className="text-style posts-title">There are no posts with #{store.userInput}</h2>
+                            <div className="text-center">
+                                <h2 className="text-style">There are no posts with #{store.userInput}</h2>
+                            </div>
                         </div>}
                     {
                         !!store.posts && store.posts.length > 0 &&
                         <div className="d-flex justify-content-center showing-title align-items-center animate__animated  animate__fadeInUp">
-                            <h2 className="text-style posts-title">Showing tags of #{store.userInput}</h2>
+                            <div className="text-center">
+                                <h2 className="text-style">Showing tags of #{store.userInput}</h2>
+                            </div>
                         </div>
                     }
+                    {/* Posts section, showing the posts according to a map() in the respective variable in the store. */}
                     <div className="card-columns">
                         {!!store.posts &&
                             store.posts.map((post, index) => {
@@ -44,7 +50,7 @@ const Posts = () => {
                                             </div>
                                             <div className="col-md-10 col-10 mt-1 info">
                                                 <div className="col-md-12">
-                                                    <div className="">{post.owner.firstName} {post.owner.lastName}</div>
+                                                    <div className=""><b>{post.owner.firstName} {post.owner.lastName}</b></div>
                                                 </div>
                                                 <div className="col-md-12 email">
                                                     <div className="">{post.owner.email}</div>
@@ -57,7 +63,7 @@ const Posts = () => {
                                         </div>
                                         <hr />
                                         <div className="card-body d-flex justify-content-between c-footer">
-                                            <span><i className="fas fa-heart"> {post.likes}</i></span> <span className="text-right">{moment(post.publishDate).format('MMMM Do YYYY, H:mm:ss')}</span>
+                                            <span><i className="fas fa-heart"></i> {post.likes}</span> <span className="text-right">{moment(post.publishDate).format('MMMM Do YYYY, H:mm:ss')}</span>
                                         </div>
                                     </div>
                                 )

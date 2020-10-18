@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import injectContext from './store/appContext';
-import Navbar from './components/navbar';
 import MainPage from './components/mainPage';
 import Footer from './components/footer';
 import Posts from './components/posts';

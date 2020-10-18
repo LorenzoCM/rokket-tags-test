@@ -12,7 +12,8 @@ const getState = ({ getStore, getActions, setStore }) => {
                 e.preventDefault();
                 setStore({
                     loading: true,
-                    posts: null                    
+                    posts: null,
+                    userInput:tag                    
                 }) 
                 history.push('/posts');                
                 const store = getStore();
@@ -38,13 +39,13 @@ const getState = ({ getStore, getActions, setStore }) => {
                         "app-id": "5f89bf78b0baa448f47363a6"
                     }
                 })
-                const data = await resp.json();                
-                console.log(data);
+                const datos = await resp.json();                
+                let { data } = datos;
                 setStore({
                     tags: data
                 })
             },            
-            handleChange: e => {
+            handleChange: e => {   //Function to catch the user's input tag and store it in a variable in the store.
                 setStore({
                     [e.target.name]: e.target.value
                 })
