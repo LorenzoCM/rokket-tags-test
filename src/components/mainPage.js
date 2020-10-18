@@ -39,7 +39,7 @@ const MainPage = props => {
             </div>
             <div className="row">
                 <div className="col-md-12 secondary-text d-flex justify-content-center align-items-center mt-4">
-                    <span>Example tags:</span>
+                    <span className="example">Example tags:</span>
                 </div>
                 <br />
                 <div className="col-md-12 d-flex justify-content-center align-items-center mt-3">

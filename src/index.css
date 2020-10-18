@@ -88,6 +88,9 @@ hr {
   .secondary-text {
     margin-left: 24px;
   }
+  .example {
+    margin-right: 21px
+  }
 }
 
 .text-style {
