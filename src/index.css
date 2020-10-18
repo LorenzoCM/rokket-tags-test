@@ -4,7 +4,8 @@
 
 body {
   display: flex;
-  width: 100vw; 
+  width: 100%;
+  height: 100%; 
   flex-direction: column;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;
@@ -51,9 +52,8 @@ hr {
   margin: -5px 0;
 }
 
-.c-footer {
-  margin-bottom: -10px;
-  font-size: 1em;
+.footer {
+  background-color: #616161;
 }
 
 @media (min-width: 576px) and (max-width: 1199px)  {

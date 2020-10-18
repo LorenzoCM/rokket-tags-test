@@ -9,18 +9,20 @@ const MainPage = props => {
 
     return (
         <div className="container content-wrap">
-            <div className="row align-items-center justify-content-center top">
-                <div className="col-md-12 justify-content-center">
+            <div className="row top">
+                <div className="col-md-12">
                     {/* Principal App Title */}
                     <div className="col-md-12 d-flex justify-content-center align-items-center animate__animated animate__bounceIn">
-                        <h1 className="text-style">Rokket Tags</h1>
+                        <h1 className="text-style mr-3">Rokket Tags</h1>
                     </div>
                     {/* App description and how to use */}
                     <div className="row col-md-12 justify-content-center mt-5">
                         <div className="col-md-8 secondary-text text-center">
                             <p>Rokket Tags is very simple to use, just write a tag word in the search bar, and the app will show you all the posts related with the tag you're interested of!</p>
-                            <p><b>HAVE FUN!</b></p>
                         </div>
+                    </div>
+                    <div className="col-md-12 d-flex justify-content-center animate__animated animate__bounceIn">
+                        <p className="mr-2"><b>HAVE FUN!</b></p>
                     </div>
                 </div>
             </div>

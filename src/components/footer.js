@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = props => {
     return (
-        <footer className="footer text-center mt-5 py-4 bg-dark text-white">     
+        <footer className="footer w-100 d-flex justify-content-center py-4 text-white">     
             <span>&copy; 2020 Copyright: Rokket Tags</span>                 
         </footer>
     )    

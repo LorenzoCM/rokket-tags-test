@@ -37,6 +37,8 @@ This project was created with React.js. In this code you will find a development
 
 In addition, you'll find the use of a loading method through a Hook state and conditional rendering. This was made with a loading spinner provided by Bootstrap. Besides, to get the posts and tags information from the database, the Dummy API (https://dummyapi.io/) was consulted in the flux, passing the fetch functions to the corresponding buttons and to the useEffect Hook, and then, storing the data in each variable in the store.
 
+On the other hand, the project was developed using React Router to navigate between routes in the app, also using its history feature and the Link tag.
+
 The main titles were animated with the animate.css library.
 
 You will find the app live Demo in the following link:
